@@ -14,22 +14,22 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            justify-content: center;
         }
         .container {
             max-width: 320px;
             margin: 0 auto;
             animation: fadeInPage 1s ease-in-out;
-            flex: 1;
         }
         .header {
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
             border-radius: 20px;
-            padding: 54px 36px;
+            padding: 40px 36px;
             text-align: center;
             backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.4);
             box-shadow: 0 6px 40px rgba(0, 0, 0, 0.15);
-            animation: breathing 3s ease-in-out infinite;
+            animation: breathing 3s ease-in-out infinite, float 6s ease-in-out infinite;
             transition: transform 0.3s ease;
             margin-bottom: 10px;
             box-sizing: border-box;
@@ -106,7 +106,7 @@
             border: 1px solid rgba(255, 255, 255, 0.4);
             box-shadow: 0 6px 40px rgba(0, 0, 0, 0.15);
             overflow: hidden;
-            animation: breathing 3s ease-in-out infinite;
+            animation: breathing 3s ease-in-out infinite, float 6s ease-in-out infinite;
             transition: transform 0.3s ease;
             width: 100%;
             box-sizing: border-box;
@@ -142,6 +142,8 @@
             transform: translateY(-10px);
             transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
             box-sizing: border-box;
+            white-space: pre-wrap;
+            word-break: break-word;
         }
         details[open] p {
             opacity: 1;
@@ -150,7 +152,8 @@
         .footer {
             text-align: center;
             font-size: 14px;
-            margin-top: 20px;
+            margin-top: auto;
+            padding-top: 20px;
         }
         @keyframes fadeInPage {
             from { opacity: 0; }
@@ -164,6 +167,10 @@
             0% { left: -100%; }
             100% { left: 100%; }
         }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-3px); }
+        }
         @media (max-width: 600px) {
             body {
                 padding: 10px;
@@ -172,7 +179,7 @@
                 max-width: 100%;
             }
             .header {
-                padding: 41px 27.3px;
+                padding: 30px 27.3px;
             }
             .button {
                 padding: 16.8px;
