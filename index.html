@@ -6,7 +6,7 @@
     <title>DeyingLuxury</title>
     <style>
         body {
-            background-color: #FFB6C1;
+            background: linear-gradient(to bottom, #DDA0DD, #BA55D3);
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
@@ -17,10 +17,13 @@
             margin: 0 auto;
         }
         .header {
-            background-color: #FFE4E1;
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 20px;
             padding: 20px;
             text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         }
         .profile-pic {
             width: 100px;
@@ -43,7 +46,7 @@
         }
         .button {
             display: block;
-            background-color: #FF69B4;
+            background: rgba(255, 255, 255, 0.2);
             color: #000;
             padding: 15px;
             margin: 10px 0;
@@ -52,6 +55,9 @@
             font-size: 18px;
             position: relative;
             padding-left: 50px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         }
         .button::before {
             content: '';
@@ -71,16 +77,38 @@
             margin-top: 20px;
             padding: 20px;
         }
-        .faq-item {
+        details {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        summary {
             font-size: 16px;
-            margin-bottom: 15px;
-        }
-        .faq-question {
             font-weight: bold;
+            padding: 10px;
+            cursor: pointer;
+            list-style: none;
+            position: relative;
         }
-        .faq-sub {
-            margin-left: 20px;
-            margin-top: 10px;
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        summary::before {
+            content: '+ ';
+            position: absolute;
+            left: 10px;
+        }
+        details[open] summary::before {
+            content: '- ';
+        }
+        details p {
+            margin: 0;
+            padding: 0 10px 10px 25px;
+            font-size: 16px;
         }
         .footer {
             text-align: center;
@@ -99,18 +127,20 @@
         <a href="#" class="button whatsapp">Whatsapp/7/24</a>
         <a href="#" class="button web">Official Web</a>
         <div class="faq">
-            <div class="faq-item">
-                <span class="faq-question">+ How do I order and pay</span>
-            </div>
-            <div class="faq-item">
-                <span class="faq-question">- What payment methods do you support?</span>
-                <p class="faq-sub">We support multiple payment methods such as paypal, Western Union, zelle cash, Apple Pay, etc.</p>
-            </div>
-            <div class="faq-item">
-                <span class="faq-question">+ Your delivery method and timeliness</span>
-            </div>
+            <details>
+                <summary>How do I order and pay</summary>
+                <p>You need to contact our dedicated customer service on WhatsApp to purchase 😊</p>
+            </details>
+            <details>
+                <summary>What payment methods do you support?</summary>
+                <p>We support multiple payment methods such as paypal, Western Union, zelle cash, Apple Pay, etc.</p>
+            </details>
+            <details>
+                <summary>Your delivery method and timeliness</summary>
+                <p>We will ship the goods within three days after payment, and free express delivery will arrive in 7-12 days. We use FedEx and other shipping methods.</p>
+            </details>
         </div>
-        <div class="footer">技术支持 @ Taplink.at</div>
+        <div class="footer">Deying Luxury 2024</div>
     </div>
 </body>
 </html>
