@@ -32,7 +32,9 @@
             animation: breathing 3s ease-in-out infinite, float 6s ease-in-out infinite;
             transition: transform 0.3s ease;
             margin-bottom: 10px;
+            margin-top: 10px;
             box-sizing: border-box;
+            will-change: transform, box-shadow;
         }
         .header:hover {
             transform: translateY(-2px);
@@ -66,6 +68,7 @@
             position: relative;
             padding-left: 50px;
             overflow: hidden;
+            will-change: transform;
         }
         .button:hover {
             background: linear-gradient(to right, #FFDAB9, #FFA07A);
@@ -82,11 +85,13 @@
             content: "";
             position: absolute;
             top: 0;
-            left: -100%;
+            left: 0;
             width: 100%;
             height: 100%;
             background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.4) 20%, transparent);
+            transform: translateX(-100%);
             animation: shine 2s infinite linear;
+            will-change: transform;
         }
         .whatsapp::before {
             content: '📞';
@@ -110,6 +115,7 @@
             transition: transform 0.3s ease;
             width: 100%;
             box-sizing: border-box;
+            will-change: transform, box-shadow;
         }
         details:hover {
             transform: translateY(-2px);
@@ -144,6 +150,7 @@
             box-sizing: border-box;
             white-space: pre-wrap;
             word-break: break-word;
+            will-change: opacity, transform;
         }
         details[open] p {
             opacity: 1;
@@ -164,8 +171,8 @@
             50% { box-shadow: 0 6px 40px rgba(255, 182, 193, 0.45); }
         }
         @keyframes shine {
-            0% { left: -100%; }
-            100% { left: 100%; }
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
         }
         @keyframes float {
             0%, 100% { transform: translateY(0); }
@@ -193,6 +200,9 @@
             details p {
                 font-size: 14px;
                 padding: 0 11.2px 11.2px 25px;
+            }
+            details[open] {
+                animation: float 6s ease-in-out infinite;
             }
         }
     </style>
