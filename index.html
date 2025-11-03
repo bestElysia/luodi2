@@ -15,6 +15,7 @@
         .container {
             max-width: 400px;
             margin: 0 auto;
+            animation: fadeInPage 1s ease-in-out;
         }
         .header {
             background: rgba(255, 255, 255, 0.2);
@@ -24,15 +25,18 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.3);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            animation: breathing 3s ease-in-out infinite;
+            transition: transform 0.3s ease;
+        }
+        .header:hover {
+            transform: translateY(-2px);
         }
         .profile-pic {
             width: 100px;
             height: 100px;
             border-radius: 50%;
-            background-color: #D3D3D3;
             margin: 0 auto 10px;
-            /* Placeholder for image */
-            background-image: url('https://via.placeholder.com/100?text=Profile'); /* Replace with actual image if available */
+            background-image: url('assets/touxiang.jpg');
             background-size: cover;
         }
         .title {
@@ -58,6 +62,11 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.3);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            animation: breathing 3s ease-in-out infinite;
+            transition: transform 0.3s ease;
+        }
+        .button:hover {
+            transform: translateY(-2px);
         }
         .button::before {
             content: '';
@@ -85,6 +94,11 @@
             border: 1px solid rgba(255, 255, 255, 0.3);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             overflow: hidden;
+            animation: breathing 3s ease-in-out infinite;
+            transition: transform 0.3s ease;
+        }
+        details:hover {
+            transform: translateY(-2px);
         }
         summary {
             font-size: 16px;
@@ -109,11 +123,34 @@
             margin: 0;
             padding: 0 10px 10px 25px;
             font-size: 16px;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        details[open] p {
+            opacity: 1;
+            transform: translateY(0);
         }
         .footer {
             text-align: center;
             font-size: 14px;
             margin-top: 20px;
+        }
+        @keyframes fadeInPage {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes breathing {
+            0%, 100% { box-shadow: 0 4px 30px rgba(221, 160, 221, 0.1); }
+            50% { box-shadow: 0 4px 30px rgba(221, 160, 221, 0.4); }
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -124,7 +161,7 @@
             <h1 class="title">DeyingLuxury</h1>
             <p class="subtitle">to order pls contact us</p>
         </div>
-        <a href="#" class="button whatsapp">Whatsapp/7/24</a>
+        <a href="https://wa.me/8613341518603?text=hello%20I%20am%20interested%20in%20luxury%20goods%2C%20please%20send%20me%20hot-selling%20products" class="button whatsapp">Whatsapp/7/24</a>
         <a href="#" class="button web">Official Web</a>
         <div class="faq">
             <details>
