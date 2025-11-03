@@ -1,1 +1,116 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeyingLuxury</title>
+    <style>
+        body {
+            background-color: #FFB6C1;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #000;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .header {
+            background-color: #FFE4E1;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #D3D3D3;
+            margin: 0 auto 10px;
+            /* Placeholder for image */
+            background-image: url('https://via.placeholder.com/100?text=Profile'); /* Replace with actual image if available */
+            background-size: cover;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+        }
+        .subtitle {
+            font-size: 16px;
+            margin: 5px 0 20px;
+        }
+        .button {
+            display: block;
+            background-color: #FF69B4;
+            color: #000;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 18px;
+            position: relative;
+            padding-left: 50px;
+        }
+        .button::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+        }
+        .whatsapp::before {
+            content: '📞';
+        }
+        .web::before {
+            content: '🌐';
+        }
+        .faq {
+            margin-top: 20px;
+            padding: 20px;
+        }
+        .faq-item {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .faq-question {
+            font-weight: bold;
+        }
+        .faq-sub {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="profile-pic"></div>
+            <h1 class="title">DeyingLuxury</h1>
+            <p class="subtitle">to order pls contact us</p>
+        </div>
+        <a href="#" class="button whatsapp">Whatsapp/7/24</a>
+        <a href="#" class="button web">Official Web</a>
+        <div class="faq">
+            <div class="faq-item">
+                <span class="faq-question">+ How do I order and pay</span>
+            </div>
+            <div class="faq-item">
+                <span class="faq-question">- What payment methods do you support?</span>
+                <p class="faq-sub">We support multiple payment methods such as paypal, Western Union, zelle cash, Apple Pay, etc.</p>
+            </div>
+            <div class="faq-item">
+                <span class="faq-question">+ Your delivery method and timeliness</span>
+            </div>
+        </div>
+        <div class="footer">技术支持 @ Taplink.at</div>
+    </div>
+</body>
+</html>
