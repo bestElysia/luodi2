@@ -6,7 +6,7 @@
     <title>DeyingLuxury</title>
     <style>
         body {
-            background: linear-gradient(to bottom, #DDA0DD, #BA55D3);
+            background: linear-gradient(to bottom, #FFE4E1, #FFB6C1);
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
@@ -27,6 +27,7 @@
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             animation: breathing 3s ease-in-out infinite;
             transition: transform 0.3s ease;
+            margin-bottom: 15px;
         }
         .header:hover {
             transform: translateY(-2px);
@@ -50,8 +51,8 @@
         }
         .button {
             display: block;
-            background: rgba(255, 255, 255, 0.2);
-            color: #000;
+            background: linear-gradient(to bottom, #FFE4E1, #FFB6C1);
+            color: #fff;
             padding: 15px;
             margin: 10px 0;
             border-radius: 30px;
@@ -84,7 +85,7 @@
         }
         .faq {
             margin-top: 20px;
-            padding: 20px;
+            padding: 0 20px;
         }
         details {
             background: rgba(255, 255, 255, 0.2);
@@ -103,7 +104,7 @@
         summary {
             font-size: 16px;
             font-weight: bold;
-            padding: 10px;
+            padding: 10px 10px 10px 30px;
             cursor: pointer;
             list-style: none;
             position: relative;
@@ -121,7 +122,7 @@
         }
         details p {
             margin: 0;
-            padding: 0 10px 10px 25px;
+            padding: 0 10px 10px 30px;
             font-size: 16px;
             opacity: 0;
             transform: translateY(-10px);
@@ -141,8 +142,8 @@
             to { opacity: 1; }
         }
         @keyframes breathing {
-            0%, 100% { box-shadow: 0 4px 30px rgba(221, 160, 221, 0.1); }
-            50% { box-shadow: 0 4px 30px rgba(221, 160, 221, 0.4); }
+            0%, 100% { box-shadow: 0 4px 30px rgba(255, 182, 193, 0.1); }
+            50% { box-shadow: 0 4px 30px rgba(255, 182, 193, 0.4); }
         }
         @media (max-width: 600px) {
             body {
@@ -150,6 +151,22 @@
             }
             .container {
                 max-width: 100%;
+            }
+            .header {
+                padding: 15px;
+            }
+            .button {
+                padding: 12px;
+                font-size: 16px;
+                padding-left: 45px;
+            }
+            summary {
+                font-size: 14px;
+                padding: 8px 8px 8px 25px;
+            }
+            details p {
+                font-size: 14px;
+                padding: 0 8px 8px 25px;
             }
         }
     </style>
@@ -162,7 +179,7 @@
             <p class="subtitle">to order pls contact us</p>
         </div>
         <a href="https://wa.me/8613341518603?text=hello%20I%20am%20interested%20in%20luxury%20goods%2C%20please%20send%20me%20hot-selling%20products" class="button whatsapp">Whatsapp/7/24</a>
-        <a href="#" class="button web">Official Web</a>
+        <a href="https://deyingluxury.com" class="button web">Official Web</a>
         <div class="faq">
             <details>
                 <summary>How do I order and pay</summary>
