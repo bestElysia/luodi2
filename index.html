@@ -53,26 +53,37 @@
             font-size: 16px;
             margin: 5px 0 20px;
         }
-        .button {
-            display: block;
-            background: linear-gradient(to bottom, #FFE4E1, #FFB6C1);
-            color: #fff;
-            padding: 21px;
-            margin: 10px 0;
-            border-radius: 30px;
-            text-decoration: none;
-            font-size: 18px;
-            position: relative;
-            padding-left: 50px;
+        .contacts {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+            border-radius: 20px;
             backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.4);
             box-shadow: 0 6px 40px rgba(0, 0, 0, 0.15);
             animation: breathing 3s ease-in-out infinite;
             transition: transform 0.3s ease;
+            margin-bottom: 15px;
             overflow: hidden;
         }
-        .button:hover {
+        .contacts:hover {
             transform: translateY(-2px);
+        }
+        .button {
+            display: block;
+            background: linear-gradient(to bottom, #FFE4E1, #FFB6C1);
+            color: #fff;
+            padding: 21px;
+            text-decoration: none;
+            font-size: 18px;
+            position: relative;
+            padding-left: 50px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+            overflow: hidden;
+        }
+        .button:last-child {
+            border-bottom: none;
+        }
+        .button:hover {
+            background: linear-gradient(to bottom, #FFDAB9, #FFA07A);
         }
         .button::before {
             content: '';
@@ -100,7 +111,7 @@
         }
         .faq {
             margin-top: 20px;
-            padding: 0 20px;
+            padding: 0;
         }
         details {
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
@@ -197,8 +208,10 @@
             <h1 class="title">DeyingLuxury</h1>
             <p class="subtitle">to order pls contact us</p>
         </div>
-        <a href="https://wa.me/8613341518603?text=hello%20I%20am%20interested%20in%20luxury%20goods%2C%20please%20send%20me%20hot-selling%20products" class="button whatsapp">Whatsapp/7/24</a>
-        <a href="https://deyingluxury.com" class="button web">Official Web</a>
+        <div class="contacts">
+            <a href="https://wa.me/8613341518603?text=hello%20I%20am%20interested%20in%20luxury%20goods%2C%20please%20send%20me%20hot-selling%20products" class="button whatsapp">Whatsapp/7/24</a>
+            <a href="https://deyingluxury.com" class="button web">Official Web</a>
+        </div>
         <div class="faq">
             <details>
                 <summary>How do I order and pay</summary>
